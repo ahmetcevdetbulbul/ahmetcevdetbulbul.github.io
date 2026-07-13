@@ -486,27 +486,37 @@ CURSOR
 
 position:fixed;
 
-width:250px;
-
-height:250px;
-
-background:
-
-radial-gradient(circle,
-
-rgba(6,182,212,.18),
-
-transparent 70%);
-
-pointer-events:none;
+width:340px;
+height:340px;
 
 border-radius:50%;
 
-filter:blur(45px);
+pointer-events:none;
 
 transform:translate(-50%,-50%);
 
+background:
+radial-gradient(circle,
+
+rgba(96,165,250,.22) 0%,
+
+rgba(59,130,246,.15) 25%,
+
+rgba(139,92,246,.10) 55%,
+
+transparent 80%
+
+);
+
+filter:blur(60px);
+
+mix-blend-mode:screen;
+
 z-index:-1;
+
+transition:
+width .25s,
+height .25s;
 
 }
 
