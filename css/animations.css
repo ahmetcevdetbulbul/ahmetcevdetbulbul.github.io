@@ -1,0 +1,323 @@
+/* ==========================
+   FLOATING LIGHTS
+========================== */
+
+@keyframes float1{
+
+0%{
+
+transform:translate(0,0) scale(1);
+
+}
+
+50%{
+
+transform:translate(120px,80px) scale(1.15);
+
+}
+
+100%{
+
+transform:translate(-40px,140px) scale(.95);
+
+}
+
+}
+
+@keyframes float2{
+
+0%{
+
+transform:translate(0,0) scale(1);
+
+}
+
+50%{
+
+transform:translate(-120px,-60px) scale(1.2);
+
+}
+
+100%{
+
+transform:translate(80px,-120px) scale(.9);
+
+}
+
+}
+
+/* ==========================
+ HERO
+========================== */
+
+.hero h1{
+
+animation:heroTitle 1.2s ease;
+
+}
+
+.hero h2{
+
+animation:heroSub 1.5s ease;
+
+}
+
+.hero p{
+
+animation:heroText 1.8s ease;
+
+}
+
+.buttons{
+
+animation:heroButtons 2s ease;
+
+}
+
+@keyframes heroTitle{
+
+from{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroSub{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroText{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroButtons{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+ GLOW
+========================== */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 10px rgba(59,130,246,.2);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 25px rgba(59,130,246,.5),
+
+0 0 60px rgba(139,92,246,.35);
+
+}
+
+100%{
+
+box-shadow:0 0 10px rgba(59,130,246,.2);
+
+}
+
+}
+
+.primary{
+
+animation:glow 3s infinite;
+
+}
+
+/* ==========================
+ CARD HOVER
+========================== */
+
+.card{
+
+transition:
+
+transform .35s,
+
+box-shadow .35s,
+
+background .35s;
+
+}
+
+.card:hover{
+
+background:rgba(255,255,255,.08);
+
+}
+
+/* ==========================
+ PROJECT
+========================== */
+
+.project{
+
+transition:.45s;
+
+}
+
+.project:hover{
+
+transform:
+
+perspective(1200px)
+
+rotateX(8deg)
+
+rotateY(-8deg)
+
+translateY(-8px);
+
+}
+
+/* ==========================
+ SECTION APPEAR
+========================== */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.fade.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================
+ NAV
+========================== */
+
+nav{
+
+transition:.35s;
+
+}
+
+nav:hover{
+
+background:rgba(255,255,255,.08);
+
+}
+
+/* ==========================
+ BUTTON
+========================== */
+
+.buttons a{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.buttons a::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.35),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+.buttons a:hover::before{
+
+left:120%;
+
+}
