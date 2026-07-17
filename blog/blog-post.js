@@ -48,6 +48,8 @@ async function loadPost() {
             <div class="post-content">${marked.parse(markdown)}</div>
         `;
 
+        enhancePostContent(container);
+
     } catch (err) {
 
         container.innerHTML = `
@@ -56,6 +58,31 @@ async function loadPost() {
         `;
         console.error(err);
 
+    }
+
+}
+
+function enhancePostContent(container) {
+
+    container.querySelectorAll("pre").forEach(pre => {
+        const code = pre.querySelector("code");
+        const match = code && code.className.match(/language-(\w+)/);
+        if (match) pre.setAttribute("data-lang", match[1]);
+    });
+
+    if (window.hljs) {
+        container.querySelectorAll("pre code").forEach(block => hljs.highlightElement(block));
+    }
+
+    if (window.renderMathInElement) {
+        renderMathInElement(container, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "\\[", right: "\\]", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "$", right: "$", display: false }
+            ]
+        });
     }
 
 }

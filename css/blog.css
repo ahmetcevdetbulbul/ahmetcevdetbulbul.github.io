@@ -246,3 +246,312 @@ font-weight:600;
 color:white;
 
 }
+
+/* ======================================================
+POST CONTENT — CODE BLOCKS
+====================================================== */
+
+.post-content pre{
+
+position:relative;
+
+margin:28px 0;
+
+padding:22px 24px;
+
+border-radius:14px;
+
+background:#0d1424;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 20px 40px -20px rgba(0,0,0,.6);
+
+overflow-x:auto;
+
+}
+
+.post-content pre code{
+
+background:none;
+
+padding:0;
+
+font-size:14.5px;
+
+line-height:1.7;
+
+font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+
+}
+
+.post-content pre::before{
+
+content:attr(data-lang);
+
+position:absolute;
+
+top:10px;
+
+right:16px;
+
+font-size:11px;
+
+font-weight:700;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+color:var(--gray);
+
+}
+
+/* ======================================================
+POST CONTENT — BLOCKQUOTE / CALLOUTS
+====================================================== */
+
+.post-content blockquote{
+
+margin:28px 0;
+
+padding:18px 22px;
+
+border-left:3px solid var(--primary);
+
+background:rgba(59,130,246,.08);
+
+border-radius:0 10px 10px 0;
+
+color:#cbd5e1;
+
+}
+
+.post-content blockquote p:last-child{
+
+margin-bottom:0;
+
+}
+
+.callout{
+
+margin:28px 0;
+
+padding:20px 24px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:var(--glass);
+
+}
+
+.callout-title{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:8px;
+
+font-size:15px;
+
+}
+
+.callout-math{ border-left:3px solid var(--secondary); }
+.callout-code{ border-left:3px solid var(--cyan); }
+.callout-tip{ border-left:3px solid #22c55e; }
+
+/* ======================================================
+POST CONTENT — FIGURES / IMAGES
+====================================================== */
+
+.post-content figure{
+
+margin:32px 0;
+
+}
+
+.post-content figure img,
+.post-content > img{
+
+width:100%;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 20px 50px -20px rgba(0,0,0,.7);
+
+display:block;
+
+}
+
+.post-content figcaption{
+
+margin-top:12px;
+
+text-align:center;
+
+font-size:14px;
+
+color:var(--gray);
+
+}
+
+/* ======================================================
+POST CONTENT — CHART / DIAGRAM CARDS
+====================================================== */
+
+.chart-card{
+
+margin:32px 0;
+
+padding:24px;
+
+border-radius:16px;
+
+background:linear-gradient(160deg,rgba(59,130,246,.08),rgba(139,92,246,.05));
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.chart-card h4{
+
+margin:0 0 18px;
+
+font-size:15px;
+
+font-weight:700;
+
+color:white;
+
+letter-spacing:.01em;
+
+}
+
+.chart-card svg,
+.chart-card img{ width:100%; height:auto; display:block; }
+
+.chart-card .chart-caption{
+
+margin-top:14px;
+
+font-size:13.5px;
+
+color:var(--gray);
+
+line-height:1.6;
+
+}
+
+/* piece-square heatmap grid */
+
+.heatmap{
+
+display:grid;
+
+grid-template-columns:repeat(8,1fr);
+
+gap:3px;
+
+max-width:420px;
+
+margin:0 auto;
+
+}
+
+.heatmap .cell{
+
+aspect-ratio:1;
+
+border-radius:4px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:11px;
+
+font-weight:600;
+
+color:rgba(255,255,255,.85);
+
+}
+
+/* ======================================================
+POST CONTENT — TABLES
+====================================================== */
+
+.post-content table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin:28px 0;
+
+font-size:15px;
+
+}
+
+.post-content th,
+.post-content td{
+
+padding:10px 14px;
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+text-align:left;
+
+}
+
+.post-content th{
+
+color:white;
+
+font-weight:700;
+
+font-size:13px;
+
+text-transform:uppercase;
+
+letter-spacing:.04em;
+
+color:var(--cyan);
+
+}
+
+.post-content hr{
+
+border:none;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+margin:44px 0;
+
+}
+
+/* KaTeX dark-theme tuning */
+
+.post-content .katex{ font-size:1.05em; }
+
+.post-content .katex-display{
+
+overflow-x:auto;
+
+overflow-y:hidden;
+
+padding:8px 0;
+
+}
