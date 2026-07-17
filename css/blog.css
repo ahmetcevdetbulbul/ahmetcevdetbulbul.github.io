@@ -1,0 +1,248 @@
+/* ======================================================
+BLOG LAYOUT
+====================================================== */
+
+.blog-header{
+
+padding:160px 0 60px;
+
+width:min(900px,92%);
+
+margin:auto;
+
+}
+
+.blog-header h1{
+
+font-size:56px;
+
+font-weight:800;
+
+background:linear-gradient(90deg,#fff,#60a5fa,#a855f7);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+margin-bottom:16px;
+
+}
+
+.blog-header p{
+
+color:var(--gray);
+
+font-size:18px;
+
+max-width:640px;
+
+}
+
+/* ======================================================
+POST LIST
+====================================================== */
+
+.post-list{
+
+width:min(900px,92%);
+
+margin:auto;
+
+padding-bottom:120px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:24px;
+
+}
+
+.post-card{
+
+display:block;
+
+text-decoration:none;
+
+color:white;
+
+padding:35px;
+
+transition:.35s;
+
+}
+
+.post-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 50px rgba(59,130,246,.3);
+
+}
+
+.post-card time{
+
+color:var(--cyan);
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:.02em;
+
+}
+
+.post-card h2{
+
+font-size:26px;
+
+margin:10px 0 12px;
+
+}
+
+.post-card p{
+
+color:var(--gray);
+
+font-size:16px;
+
+margin-bottom:16px;
+
+}
+
+/* ======================================================
+POST ARTICLE
+====================================================== */
+
+.post-article{
+
+width:min(760px,92%);
+
+margin:auto;
+
+padding:160px 0 120px;
+
+}
+
+.post-article .post-meta{
+
+margin-bottom:30px;
+
+}
+
+.post-article .post-meta time{
+
+color:var(--cyan);
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+.post-article h1{
+
+font-size:42px;
+
+font-weight:800;
+
+line-height:1.2;
+
+margin:14px 0 30px;
+
+}
+
+.post-content{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#e2e8f0;
+
+}
+
+.post-content h2{
+
+font-size:28px;
+
+margin:44px 0 18px;
+
+color:white;
+
+}
+
+.post-content h3{
+
+font-size:22px;
+
+margin:34px 0 14px;
+
+color:white;
+
+}
+
+.post-content p{
+
+margin-bottom:20px;
+
+}
+
+.post-content ul,
+.post-content ol{
+
+margin:0 0 20px 24px;
+
+color:#e2e8f0;
+
+}
+
+.post-content li{
+
+margin-bottom:8px;
+
+}
+
+.post-content strong{
+
+color:white;
+
+}
+
+.post-content code{
+
+background:rgba(255,255,255,.08);
+
+padding:2px 8px;
+
+border-radius:6px;
+
+font-size:.9em;
+
+}
+
+.post-content a{
+
+color:#60a5fa;
+
+}
+
+.back-link{
+
+display:inline-block;
+
+margin-bottom:20px;
+
+color:var(--gray);
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.back-link:hover{
+
+color:white;
+
+}
