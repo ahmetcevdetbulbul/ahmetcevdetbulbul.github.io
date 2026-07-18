@@ -5,19 +5,5 @@
     "date": "2026-07-10",
     "excerpt": "Notes on turning LLM prototypes into reliable, production automation — from prompt design to error handling and monitoring.",
     "tags": ["AI", "Automation"]
-  },
-  {
-    "slug": "what-makes-a-good-developer-portfolio",
-    "title": "What Makes a Good Developer Portfolio in 2026",
-    "date": "2026-07-14",
-    "excerpt": "A portfolio isn't a resume clone. It's a demo of how you think, build, and communicate — here's what I optimized for on this site.",
-    "tags": ["Web Development", "Career"]
-  },
-  {
-    "slug": "how-my-chess-engine-thinks",
-    "title": "How My Chess Engine Thinks: Minimax, Alpha-Beta Pruning, and Making Search Visible",
-    "date": "2026-07-18",
-    "excerpt": "Building a chess engine you can watch think — the math behind minimax and alpha-beta pruning, the evaluation function, and real benchmark data from the actual codebase.",
-    "tags": ["AI", "Python", "Algorithms"]
   }
 ]
