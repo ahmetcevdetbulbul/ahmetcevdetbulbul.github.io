@@ -1,3 +1,10 @@
+---
+title: What Makes a Good Developer Portfolio in 2026
+date: 2026-07-14
+excerpt: A portfolio isn't a resume clone. It's a demo of how you think, build, and communicate — here's what I optimized for on this site.
+tags: [Web Development, Career]
+---
+
 ## A portfolio is a demo, not a resume clone
 
 A resume tells someone what you claim to have done. A portfolio should let them

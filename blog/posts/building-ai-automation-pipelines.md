@@ -1,3 +1,10 @@
+---
+title: Building AI Automation Pipelines That Actually Ship
+date: 2026-07-10
+excerpt: Notes on turning LLM prototypes into reliable, production automation — from prompt design to error handling and monitoring.
+tags: [AI, Automation]
+---
+
 ## The gap between a demo and a pipeline
 
 A working AI demo is easy: call an API, print the response. A pipeline that runs

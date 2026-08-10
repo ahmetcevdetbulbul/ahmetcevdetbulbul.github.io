@@ -26,7 +26,7 @@ async function loadPost() {
         if (!mdRes.ok) throw new Error("Post not found");
 
         const meta = posts.find(p => p.slug === slug);
-        const markdown = await mdRes.text();
+        const markdown = stripFrontmatter(await mdRes.text());
 
         const title = meta ? meta.title : slug;
 
@@ -85,6 +85,10 @@ function enhancePostContent(container) {
         });
     }
 
+}
+
+function stripFrontmatter(markdown) {
+    return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 }
 
 function formatDate(dateStr) {

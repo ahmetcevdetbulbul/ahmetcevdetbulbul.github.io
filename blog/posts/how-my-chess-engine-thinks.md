@@ -1,3 +1,10 @@
+---
+title: "How My Chess Engine Thinks: Minimax, Alpha-Beta Pruning, and Making Search Visible"
+date: 2026-07-18
+excerpt: Building a chess engine you can watch think — the math behind minimax and alpha-beta pruning, the evaluation function, and real benchmark data from the actual codebase.
+tags: [AI, Python, Algorithms]
+---
+
 ## Abstract
 
 Most chess engines are black boxes: you give them a position, they give you a move, and the

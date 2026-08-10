@@ -1,0 +1,32 @@
+name: Build blog posts.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blog/posts/**.md"
+      - "scripts/build-posts.js"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate blog/posts.json
+        run: node scripts/build-posts.js
+
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- blog/posts.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add blog/posts.json
+            git commit -m "chore: regenerate blog/posts.json"
+            git push
+          else
+            echo "posts.json already up to date"
+          fi
