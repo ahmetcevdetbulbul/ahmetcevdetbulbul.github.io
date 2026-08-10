@@ -1,5 +1,16 @@
 [
   {
+    "slug": "unreal-engine-npc-ai-optimization",
+    "title": "Planning an Unreal Engine Project: NPCs and AI Optimization",
+    "date": "2026-08-10",
+    "excerpt": "Notes on a project I'm scoping out — adding NPCs to an Unreal Engine level and getting their AI to scale, built around Behavior Trees and State Trees.",
+    "tags": [
+      "Unreal Engine",
+      "AI",
+      "Game Development"
+    ]
+  },
+  {
     "slug": "how-my-chess-engine-thinks",
     "title": "How My Chess Engine Thinks: Minimax, Alpha-Beta Pruning, and Making Search Visible",
     "date": "2026-07-18",
