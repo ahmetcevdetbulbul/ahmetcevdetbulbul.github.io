@@ -1,0 +1,59 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg">
+  <g font-family="Consolas, monospace">
+
+    <!-- gridlines -->
+    <g stroke="rgba(255,255,255,.08)" stroke-width="1">
+      <line x1="60" y1="340" x2="700" y2="340"/>
+      <line x1="60" y1="254" x2="700" y2="254"/>
+      <line x1="60" y1="168" x2="700" y2="168"/>
+      <line x1="60" y1="82"  x2="700" y2="82"/>
+    </g>
+    <g fill="#94a3b8" font-size="12" text-anchor="end">
+      <text x="52" y="344">0N</text>
+      <text x="52" y="258">2N</text>
+      <text x="52" y="172">4N</text>
+      <text x="52" y="86">6N</text>
+    </g>
+    <g fill="#94a3b8" font-size="12" text-anchor="middle">
+      <text x="60"  y="360">0s</text>
+      <text x="220" y="360">1s</text>
+      <text x="380" y="360">2s</text>
+      <text x="540" y="360">3s</text>
+      <text x="700" y="360">4s</text>
+    </g>
+    <text x="380" y="17" fill="#e2e8f0" font-size="13" text-anchor="middle" font-weight="bold">LEDon'a göre ortalama Yük Kuvveti (LF), ağırlık sınıfına göre</text>
+
+    <!-- previous (wrong) window: 0.5-1.5s -->
+    <rect x="140" y="30" width="160" height="310" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="220" y="45" fill="#ef4444" font-size="11.5" text-anchor="middle" font-weight="bold">Önceki (yanlış) pencere</text>
+
+    <!-- correct early window: 0.1-0.7s -->
+    <rect x="76" y="30" width="96" height="310" fill="rgba(34,211,238,0.10)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="124" y="405" fill="#22d3ee" font-size="11.5" text-anchor="middle" font-weight="bold">GERÇEK ERKEN</text>
+    <text x="124" y="418" fill="#22d3ee" font-size="10.5" text-anchor="middle">(kuvvet kör)</text>
+
+    <!-- correct late window: 2.5-4.0s -->
+    <rect x="460" y="30" width="240" height="310" fill="rgba(34,197,94,0.10)" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="580" y="405" fill="#22c55e" font-size="11.5" text-anchor="middle" font-weight="bold">GERÇEK GEÇ</text>
+    <text x="580" y="418" fill="#22c55e" font-size="10.5" text-anchor="middle">(net plato)</text>
+
+    <!-- 660g line -->
+    <polyline points="60,340 196,338 220,300 268,180 316,110 380,75 460,63 540,61.4 700,61.4"
+              fill="none" stroke="#f97316" stroke-width="2.5"/>
+    <text x="705" y="65" fill="#fdba74" font-size="12">660g → 6.5N</text>
+
+    <!-- 330g line -->
+    <polyline points="60,340 196,339 220,320 268,250 316,215 380,200 460,198.6 540,198.6 700,198.6"
+              fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+    <text x="705" y="202" fill="#67e8f9" font-size="12">330g → 3.3N</text>
+
+    <!-- 165g line -->
+    <polyline points="60,340 196,339 220,333 268,300 316,280 380,272 460,271 540,271 700,271"
+              fill="none" stroke="#a855f7" stroke-width="2.5"/>
+    <text x="705" y="275" fill="#d8b4fe" font-size="12">165g → 1.61N</text>
+
+    <text x="380" y="400" fill="#64748b" font-size="11.5" text-anchor="middle">
+      Faz 12 teşhisinden yeniden oluşturulan şematik — t &lt; 0.85s'de kuvvet sensör gürültü tabanında, üç sınıf da ayırt edilemez.
+    </text>
+  </g>
+</svg>

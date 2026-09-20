@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg">
+  <g font-family="Consolas, monospace">
+    <!-- base line -->
+    <line x1="40" y1="70" x2="720" y2="70" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+
+    <!-- stage segments -->
+    <rect x="40"  y="58" width="90"  height="24" rx="4" fill="rgba(239,68,68,0.25)" stroke="#ef4444"/>
+    <rect x="130" y="58" width="90"  height="24" rx="4" fill="rgba(249,115,22,0.25)" stroke="#f97316"/>
+    <rect x="220" y="58" width="230" height="24" rx="4" fill="rgba(34,211,238,0.25)" stroke="#22d3ee"/>
+    <rect x="450" y="58" width="140" height="24" rx="4" fill="rgba(168,85,247,0.25)" stroke="#a855f7"/>
+    <rect x="590" y="58" width="130" height="24" rx="4" fill="rgba(34,197,94,0.25)" stroke="#22c55e"/>
+
+    <!-- stage labels -->
+    <g font-size="12.5" fill="#e2e8f0" text-anchor="middle">
+      <text x="85"  y="45">Faz 0-1</text>
+      <text x="175" y="45">Faz 2</text>
+      <text x="335" y="45">Faz 3-6</text>
+      <text x="520" y="45">Faz 7-9</text>
+      <text x="655" y="45">Faz 10-13</text>
+    </g>
+
+    <g font-size="12" fill="#94a3b8" text-anchor="middle">
+      <text x="85"  y="105">Yapısal teşhis +</text>
+      <text x="85"  y="120">örnekleme hatası</text>
+
+      <text x="175" y="105">Olay-kilitli</text>
+      <text x="175" y="120">pipeline</text>
+
+      <text x="335" y="105">LOSO + ablasyon +</text>
+      <text x="335" y="120">spektral zenginleştirme</text>
+
+      <text x="520" y="105">Pivot: ağırlık</text>
+      <text x="520" y="120">sınıflandırma</text>
+
+      <text x="655" y="105">Kuvvet zamanlama</text>
+      <text x="655" y="120">düzeltmesi</text>
+    </g>
+
+    <!-- outcome row -->
+    <g font-size="12" font-weight="bold" text-anchor="middle">
+      <text x="85"  y="150" fill="#ef4444">1 hata bulundu</text>
+      <text x="175" y="150" fill="#f97316">1 hata düzeltildi</text>
+      <text x="335" y="150" fill="#22d3ee">Bio-Gating desteklenmedi</text>
+      <text x="520" y="150" fill="#a855f7">Ağırlık sinyali zayıf</text>
+      <text x="655" y="150" fill="#22c55e">Metodoloji doğrulandı</text>
+    </g>
+
+    <text x="380" y="195" fill="#64748b" font-size="12" text-anchor="middle">
+      14 script, kronolojik araştırma süreci — her kutu bir teşhis / düzeltme / test döngüsünü temsil eder
+    </text>
+  </g>
+</svg>

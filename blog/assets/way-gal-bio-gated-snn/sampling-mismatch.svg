@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg">
+  <g font-family="Consolas, monospace">
+
+    <text x="20" y="28" fill="#ef4444" font-size="14" font-weight="bold">ÖNCE — indeks bazlı hizalama (YANLIŞ)</text>
+
+    <text x="20" y="62" fill="#94a3b8" font-size="12.5">EEG @ 500 Hz</text>
+    <line x1="150" y1="58" x2="720" y2="58" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+    <g stroke="#22d3ee" stroke-width="2">
+      <line x1="150" y1="52" x2="150" y2="64"/>
+      <line x1="196" y1="52" x2="196" y2="64"/>
+      <line x1="242" y1="52" x2="242" y2="64"/>
+      <line x1="288" y1="52" x2="288" y2="64"/>
+      <line x1="334" y1="52" x2="334" y2="64"/>
+    </g>
+    <circle cx="334" cy="58" r="7" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="334" y="42" fill="#ef4444" font-size="11.5" text-anchor="middle">idx 50 → t=0.100s</text>
+
+    <text x="20" y="112" fill="#94a3b8" font-size="12.5">sEMG @ 4000 Hz</text>
+    <line x1="150" y1="108" x2="720" y2="108" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+    <g stroke="#f97316" stroke-width="2">
+      <line x1="150" y1="102" x2="150" y2="114"/>
+      <line x1="196" y1="102" x2="196" y2="114"/>
+      <line x1="242" y1="102" x2="242" y2="114"/>
+      <line x1="288" y1="102" x2="288" y2="114"/>
+      <line x1="334" y1="102" x2="334" y2="114"/>
+    </g>
+    <circle cx="334" cy="108" r="7" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="334" y="132" fill="#ef4444" font-size="11.5" text-anchor="middle">idx 50 → t=0.0125s</text>
+
+    <line x1="334" y1="58" x2="334" y2="108" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="440" y="90" fill="#ef4444" font-size="12.5" font-weight="bold">aynı indeks (50), 8× farklı zaman noktası</text>
+
+    <line x1="0" y1="165" x2="760" y2="165" stroke="rgba(255,255,255,.08)"/>
+
+    <text x="20" y="195" fill="#22c55e" font-size="14" font-weight="bold">SONRA — zaman damgası bazlı hizalama (DOĞRU)</text>
+
+    <text x="20" y="229" fill="#94a3b8" font-size="12.5">EEG @ 500 Hz</text>
+    <line x1="150" y1="225" x2="720" y2="225" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+    <g stroke="#22d3ee" stroke-width="2">
+      <line x1="150" y1="219" x2="150" y2="231"/>
+      <line x1="196" y1="219" x2="196" y2="231"/>
+      <line x1="242" y1="219" x2="242" y2="231"/>
+    </g>
+    <circle cx="242" cy="225" r="7" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="242" y="209" fill="#22c55e" font-size="11.5" text-anchor="middle">idx 20 → t=0.040s</text>
+
+    <text x="20" y="279" fill="#94a3b8" font-size="12.5">sEMG @ 4000 Hz</text>
+    <line x1="150" y1="275" x2="720" y2="275" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+    <g stroke="#f97316" stroke-width="2">
+      <line x1="150" y1="269" x2="150" y2="281"/>
+      <line x1="196" y1="269" x2="196" y2="281"/>
+      <line x1="242" y1="269" x2="242" y2="281"/>
+      <line x1="288" y1="269" x2="288" y2="281"/>
+      <line x1="334" y1="269" x2="334" y2="281"/>
+      <line x1="380" y1="269" x2="380" y2="281"/>
+    </g>
+    <circle cx="380" cy="275" r="7" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="380" y="299" fill="#22c55e" font-size="11.5" text-anchor="middle">idx 160 → t=0.040s</text>
+
+    <line x1="242" y1="225" x2="380" y2="275" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="560" y="255" fill="#22c55e" font-size="12.5" font-weight="bold">farklı indeks, aynı gerçek zaman</text>
+  </g>
+</svg>
