@@ -1,14 +1,14 @@
 const words = [
 
-"Electrical & Electronics Engineer",
+"Computer Scientist",
 
-"RF/MW Design Engineer",
+"AI Researcher",
 
-"Software Developer",
+"Game Developer",
 
-"Signal Processing",
+"Software Engineer",
 
-"Embedded Systems"
+"Machine Learning"
 
 ];
 
