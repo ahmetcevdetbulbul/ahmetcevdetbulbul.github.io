@@ -1,5 +1,17 @@
 [
   {
+    "slug": "way-gal-bio-gated-snn-research",
+    "title": "WAY-EEG-GAL Üzerinde Bio-Gated SNN Hipotezi: Titiz Bir Negatif Sonuç Araştırması",
+    "date": "2026-09-20",
+    "excerpt": "EEG ve sEMG'yi öğrenilmiş bir kapılama mekanizmasıyla birleştiren bir biyonik el kontrol hipotezini, sıfır sentetik veriyle ve konu-bağımsız istatistiksel titizlikle test ettim — hipotez desteklenmedi, ama süreçte gerçek ve sağlam bir fizyolojik bulgu ile kritik bir metodolojik hata ortaya çıktı.",
+    "tags": [
+      "Yapay Zeka",
+      "Sinirbilim",
+      "Araştırma",
+      "Python"
+    ]
+  },
+  {
     "slug": "unreal-engine-npc-ai-optimization",
     "title": "Planning an Unreal Engine Project: NPCs and AI Optimization",
     "date": "2026-08-10",
