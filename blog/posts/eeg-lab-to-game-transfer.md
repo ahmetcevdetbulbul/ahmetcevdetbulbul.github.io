@@ -63,7 +63,7 @@ test etmek için, aynı kayıtları iki bağımsız şekilde etiketledim:
 
 <div class="chart-card">
 <h4>Olay-kilitli pencere tanımı</h4>
-<img src="assets/fig5_windowing_schematic.png" alt="Zaman çizelgesi: yüksek-yük penceresi, kill/death olayından T-4 saniye önce başlayıp T-0'da bitiyor.">
+<img src="assets/eeg-lab-to-game-transfer/fig5_windowing_schematic.png" alt="Zaman çizelgesi: yüksek-yük penceresi, kill/death olayından T-4 saniye önce başlayıp T-0'da bitiyor.">
 <p class="chart-caption">Yüksek-yük penceresi, her kill/death olayından hemen önceki 4 saniyeye
 kilitleniyor — olayın kendisine değil, öncesindeki beklenti/tırmanma dönemine.</p>
 </div>
@@ -103,7 +103,7 @@ açıklayan şey ne demografi ne de kişilik oldu — açıklayan şey, katılı
 
 <div class="chart-card">
 <h4>Bireysel transfer başarısı vs. özellik-uzayı konumu</h4>
-<img src="assets/fig2_heterogeneity_EVENT.png" alt="Saçılım grafiği: özellik-uzayı konumu ile sıfır-atışlı yüksek-yük recall arasında güçlü pozitif ilişki, Spearman rho=0.91.">
+<img src="assets/eeg-lab-to-game-transfer/fig2_heterogeneity_EVENT.png" alt="Saçılım grafiği: özellik-uzayı konumu ile sıfır-atışlı yüksek-yük recall arasında güçlü pozitif ilişki, Spearman rho=0.91.">
 <p class="chart-caption">Gerçek oyun pencereleri, STEW'in "yüksek yük" merkezine ne kadar
 yakınsa, model o katılımcıyı o kadar iyi tespit ediyor — katılımcının gerçekte ne kadar
 zorlandığından bağımsız olarak.</p>
@@ -130,21 +130,21 @@ sonuçlar fiziksel gürültüden değil, gerçek bir sinyalden kaynaklanıyor gi
 
 <div class="chart-card">
 <h4>Kalibrasyon bütçesi vs. yüksek-yük recall</h4>
-<img src="assets/fig1_calibration_curve_EVENT.png" alt="Kalibrasyon penceresi sayısı arttıkça yüksek-yük recall'ün %36'dan %68'e çıktığını gösteren eğri.">
+<img src="assets/eeg-lab-to-game-transfer/fig1_calibration_curve_EVENT.png" alt="Kalibrasyon penceresi sayısı arttıkça yüksek-yük recall'ün %36'dan %68'e çıktığını gösteren eğri.">
 <p class="chart-caption">Sadece 80 saniyelik (20 pencere) kişiye özel kalibrasyon verisi,
 recall'ü %28'den %58'e çıkarıyor. 80 pencere (~5.3 dakika) ile %68 zirveye ulaşılıyor.</p>
 </div>
 
 <div class="chart-card">
 <h4>İki etiketleme stratejisinin doğrudan karşılaştırması</h4>
-<img src="assets/fig4_robustness.png" alt="Yan yana iki bar grafik: (a) iki etiketleme stratejisinin zero-shot recall'ü neredeyse aynı, (b) olay-kilitli tasarımın özellik-uzayı açıklamasının daha güçlü olduğunu gösteriyor.">
+<img src="assets/eeg-lab-to-game-transfer/fig4_robustness.png" alt="Yan yana iki bar grafik: (a) iki etiketleme stratejisinin zero-shot recall'ü neredeyse aynı, (b) olay-kilitli tasarımın özellik-uzayı açıklamasının daha güçlü olduğunu gösteriyor.">
 <p class="chart-caption">Sol: iki yöntemin zero-shot başarısızlığı istatistiksel olarak ayırt
 edilemez. Sağ: olay-kilitli tasarım, mekanistik açıklamayı (rho) daha da netleştiriyor.</p>
 </div>
 
 <div class="chart-card">
 <h4>Kalibrasyon öncesi/sonrası sınıf bazlı recall</h4>
-<img src="assets/fig3_classwise_EVENT.png" alt="Kalibrasyon öncesi ve sonrası düşük-yük ve yüksek-yük recall'ünü karşılaştıran bar grafik.">
+<img src="assets/eeg-lab-to-game-transfer/fig3_classwise_EVENT.png" alt="Kalibrasyon öncesi ve sonrası düşük-yük ve yüksek-yük recall'ünü karşılaştıran bar grafik.">
 <p class="chart-caption">Düşük-yük recall zaten yüksekti ve kalibrasyonla hafif düştü; yüksek-yük
 recall ise kalibrasyonla belirgin şekilde arttı.</p>
 </div>
