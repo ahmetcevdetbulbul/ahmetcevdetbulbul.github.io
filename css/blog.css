@@ -599,3 +599,71 @@ font-size:13px;
 color:var(--gray);
 
 }
+
+/* ======================================================
+LANGUAGE SWITCH (bilingual posts)
+====================================================== */
+
+.post-content [data-lang][hidden]{ display:none; }
+
+.lang-switch{
+
+display:inline-flex;
+
+margin:0 0 14px;
+
+border:1px solid rgba(255,255,255,.14);
+
+border-radius:10px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.05);
+
+}
+
+.lang-switch button{
+
+padding:7px 14px;
+
+border:0;
+
+background:transparent;
+
+color:var(--gray);
+
+font:600 13px "Inter",sans-serif;
+
+letter-spacing:.04em;
+
+cursor:pointer;
+
+transition:.18s;
+
+}
+
+.lang-switch button:hover{ color:white; }
+
+.lang-switch button.on{
+
+background:rgba(59,130,246,.28);
+
+color:white;
+
+}
+
+.post-article h1.long-title{
+
+font-size:32px;
+
+line-height:1.3;
+
+letter-spacing:-.01em;
+
+}
+
+@media (max-width:600px){
+
+.post-article h1.long-title{ font-size:25px; }
+
+}

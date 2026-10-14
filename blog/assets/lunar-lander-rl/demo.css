@@ -102,7 +102,7 @@ button,input,select{font:inherit;color:inherit}
 .panels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
 @media (max-width:560px){ .panels{grid-template-columns:1fr} .hud{grid-template-columns:repeat(3,1fr)} }
 .panel h3{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;font-weight:700}
-.row{display:grid;grid-template-columns:78px 1fr 46px;align-items:center;gap:8px;margin-bottom:5px;font-size:12px}
+.row{display:grid;grid-template-columns:104px 1fr 44px;align-items:center;gap:8px;margin-bottom:5px;font-size:12px}
 .row .lbl{color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--text)}
 .bar{position:relative;height:8px;background:rgba(255,255,255,.07);border-radius:99px;overflow:hidden}
@@ -155,3 +155,8 @@ button,input,select{font:inherit;color:inherit}
   color:var(--gray);font-size:12px;line-height:1.55;
 }
 .note b{color:var(--text)}
+
+.head-right{display:flex;align-items:center;gap:8px}
+.seg[hidden]{display:none}
+.seg-lang button{padding:5px 9px;font-size:11.5px}
+.chart h4 b{font-weight:700}

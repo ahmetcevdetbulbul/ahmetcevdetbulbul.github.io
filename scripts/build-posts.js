@@ -63,13 +63,19 @@ function build() {
         const meta = parseFrontmatter(raw, file);
         const slug = file.replace(/\.md$/, "");
 
-        return {
+        const post = {
             slug,
             title: meta.title,
             date: meta.date,
             excerpt: meta.excerpt,
             tags: meta.tags
         };
+
+        // İki dilli yazılar için isteğe bağlı Türkçe başlık/özet
+        if (meta.title_tr) post.title_tr = meta.title_tr;
+        if (meta.excerpt_tr) post.excerpt_tr = meta.excerpt_tr;
+
+        return post;
     });
 
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
