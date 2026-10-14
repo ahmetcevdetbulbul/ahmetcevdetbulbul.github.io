@@ -1,15 +1,17 @@
 [
   {
     "slug": "lunar-lander-rl-interactive",
-    "title": "Roketi İndirmeyi Tarayıcında Öğret: Sıfırdan PPO ile Lunar Lander (İnteraktif)",
+    "title": "Client-Side Proximal Policy Optimization for Discrete-Action Lunar Landing: Implementation, Learning Dynamics, and a Stochastic–Deterministic Evaluation Gap",
     "date": "2026-10-14",
-    "excerpt": "Lunar Lander'ı kendi bilgisayarında, tarayıcının içinde eğit — sıfırdan yazılmış PPO, canlı eğitim grafikleri, eğitilmiş modeli çalıştırma ve arkasındaki matematiğin tam açıklaması.",
+    "excerpt": "A dependency-free PPO implementation that trains entirely in the reader's browser on a Lunar Lander benchmark, with live learning curves, a full derivation of the method, and an unexpected gap between stochastic and argmax evaluation.",
     "tags": [
-      "Pekiştirmeli Öğrenme",
+      "Reinforcement Learning",
       "PPO",
-      "Oyun Geliştirme",
+      "Game Development",
       "JavaScript"
-    ]
+    ],
+    "title_tr": "Ayrık Eylemli Ay İniş Problemi için İstemci Taraflı Yakınsal Politika Optimizasyonu: Uygulama, Öğrenme Dinamikleri ve Stokastik–Deterministik Değerlendirme Farkı",
+    "excerpt_tr": "Okuyucunun tarayıcısında, bağımlılıksız çalışan bir PPO uygulaması — canlı öğrenme eğrileri, yöntemin tam türetimi ve stokastik ile argmax değerlendirme arasında beklenmedik bir fark."
   },
   {
     "slug": "eeg-lab-to-game-transfer",
