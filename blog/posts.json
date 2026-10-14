@@ -1,5 +1,17 @@
 [
   {
+    "slug": "lunar-lander-rl-interactive",
+    "title": "Roketi İndirmeyi Tarayıcında Öğret: Sıfırdan PPO ile Lunar Lander (İnteraktif)",
+    "date": "2026-10-14",
+    "excerpt": "Lunar Lander'ı kendi bilgisayarında, tarayıcının içinde eğit — sıfırdan yazılmış PPO, canlı eğitim grafikleri, eğitilmiş modeli çalıştırma ve arkasındaki matematiğin tam açıklaması.",
+    "tags": [
+      "Pekiştirmeli Öğrenme",
+      "PPO",
+      "Oyun Geliştirme",
+      "JavaScript"
+    ]
+  },
+  {
     "slug": "eeg-lab-to-game-transfer",
     "title": "Laboratuvarda Eğitilen Bir EEG Modeli Gerçek Bir Oyunda İşe Yarar mı? Çift-Etiketleme ile Sağlamlık Testi",
     "date": "2026-09-29",
