@@ -113,4 +113,20 @@ function escapeHtml(str) {
 
 }
 
+// Gömülü interaktif demolar (iframe) kendi yüksekliklerini bildirir
+window.addEventListener("message", (e) => {
+
+    if (e.origin !== window.location.origin) return;
+    if (!e.data || e.data.type !== "iframe-height") return;
+
+    document.querySelectorAll(".demo-embed iframe").forEach(frame => {
+
+        if (frame.contentWindow === e.source) {
+            frame.style.height = Math.ceil(e.data.height) + "px";
+        }
+
+    });
+
+});
+
 loadPost();

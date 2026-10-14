@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Lander — Tarayıcıda PPO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= SİMÜLASYON ================= -->
+  <section class="card">
+    <div class="card-head">
+      <h2><span class="dot"></span>Simülasyon</h2>
+      <span class="badge" id="policyBadge">Rastgele politika</span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="sim" width="600" height="400"></canvas>
+      <div class="banner" id="banner"></div>
+    </div>
+
+    <div class="hud">
+      <div class="stat"><div class="k">Adım</div><div class="v" id="hudSteps">0</div></div>
+      <div class="stat"><div class="k">Bölüm skoru</div><div class="v" id="hudScore">0</div></div>
+      <div class="stat"><div class="k">Son bölümler</div><div class="v" id="hudHist">—</div></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn primary" id="runBtn">▶ Çalıştır</button>
+      <button class="btn" id="terrainBtn" title="Yeni rastgele arazi ve başlangıç hızı">⟳ Yeni arazi</button>
+      <div class="seg" id="modeSeg" role="group" aria-label="Politika">
+        <button data-mode="random" class="on">Rastgele</button>
+        <button data-mode="trained" disabled>Eğitilmiş model</button>
+      </div>
+      <div class="seg" id="speedSeg" role="group" aria-label="Hız">
+        <button data-speed="1" class="on">1×</button>
+        <button data-speed="2">2×</button>
+        <button data-speed="4">4×</button>
+      </div>
+    </div>
+
+    <div class="opts">
+      <label class="chk"><input type="checkbox" id="loopChk"> Otomatik tekrarla</label>
+      <label class="chk" title="Açık: her durumda en yüksek olasılıklı eylem (argmax). Kapalı: π(a|s) dağılımından örnekle."><input type="checkbox" id="detChk"> Deterministik (argmax)</label>
+    </div>
+    <div class="hint">İpucu: kısa eğitimlerde <b>argmax</b>, örneklemeden çok daha kötü olabilir (politika itkiyi olasılıksal “darbelerle” ayarlar). Nedeni yazının altında.</div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Gözlem vektörü s (8 sensör)</h3>
+        <div id="obsRows"></div>
+      </div>
+      <div class="panel">
+        <h3>Politika π(a | s)</h3>
+        <div id="actRows"></div>
+        <div class="hint" id="actHint"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EĞİTİM ================= -->
+  <section class="card">
+    <div class="card-head">
+      <h2><span class="dot" style="background:var(--violet);box-shadow:0 0 10px var(--violet)"></span>Eğitim <small style="color:var(--dim);font-weight:500">(PPO · senin işlemcinde)</small></h2>
+      <span class="badge" id="coreBadge">—</span>
+    </div>
+
+    <div class="train-top">
+      <div class="field">
+        <label for="iterInput">İterasyon sayısı</label>
+        <input type="number" id="iterInput" min="1" max="3000" step="10" value="200">
+      </div>
+      <button class="btn primary" id="trainBtn">⚡ Eğit</button>
+      <button class="btn small" id="resetBtn" title="Kayıtlı modeli ve grafikleri sil">Modeli sıfırla</button>
+    </div>
+
+    <div class="chips" style="margin-top:10px" id="presetChips">
+      <button class="chip" data-n="50">50 · hızlı</button>
+      <button class="chip" data-n="150">150 · dengeli</button>
+      <button class="chip" data-n="300">300 · sağlam</button>
+      <button class="chip" data-n="600">600 · uzun</button>
+    </div>
+
+    <div class="opts">
+      <label class="chk"><input type="checkbox" id="previewChk" checked> Eğitim sırasında canlı önizleme</label>
+      <label class="chk" id="contWrap"><input type="checkbox" id="contChk" checked> Mevcut modelden devam et</label>
+    </div>
+
+    <div class="hint">
+      1 iterasyon = 8 paralel ortamdan <b>2048 adım</b> toplamak + 4 epoch PPO güncellemesi.
+      <b id="stepsHint">200 iterasyon ≈ 410 bin adım.</b>
+    </div>
+
+    <div class="progress"><i id="progBar"></i></div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">İterasyon</div><div class="v" id="stIter">0</div></div>
+      <div class="stat"><div class="k">Toplam adım</div><div class="v" id="stSteps">0</div></div>
+      <div class="stat"><div class="k">Adım / sn</div><div class="v" id="stSps">—</div></div>
+      <div class="stat"><div class="k">Geçen süre</div><div class="v" id="stTime">0:00</div></div>
+      <div class="stat"><div class="k">Kalan (tahmini)</div><div class="v" id="stEta">—</div></div>
+      <div class="stat"><div class="k">İniş başarısı</div><div class="v" id="stSucc">—</div></div>
+    </div>
+
+    <div class="charts">
+      <div class="chart"><h4>Ortalama ödül <span id="vReward">—</span></h4><canvas id="chReward" width="480" height="300"></canvas></div>
+      <div class="chart"><h4>İniş başarısı % <span id="vSucc">—</span></h4><canvas id="chSucc" width="480" height="300"></canvas></div>
+      <div class="chart"><h4>Politika entropisi H(π) <span id="vEnt">—</span></h4><canvas id="chEnt" width="480" height="300"></canvas></div>
+      <div class="chart"><h4>log₁₀ değer kaybı <span id="vVl">—</span></h4><canvas id="chVl" width="480" height="300"></canvas></div>
+    </div>
+    <div class="empty" id="chartEmpty">Grafikler “Eğit” düğmesine bastığında canlı olarak dolar.</div>
+
+    <div class="note">
+      Tüm hesap <b>tarayıcında</b> bir Web Worker içinde çalışır; sunucuya hiçbir şey gönderilmez.
+      Bu, Gymnasium <b>LunarLander-v3</b>'ün (aynı gözlem, aksiyon ve ödül yapısı) hafif bir JavaScript portudur;
+      Box2D yerine sade bir fizik motoru kullanır, bu yüzden skorlar birebir aynı olmaz.
+    </div>
+  </section>
+
+</div>
+
+<script src="lander-env.js"></script>
+<script src="ppo.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
